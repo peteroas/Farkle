@@ -1,0 +1,18 @@
+<h1>Show Roll</h1>
+
+<ul>
+
+  <li>
+    <strong>Locked?:</strong>
+    <%= @roll.locked? %>
+  </li>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @roll.number %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.roll_path(@conn, :edit, @roll) %></span>
+<span><%= link "Back", to: Routes.roll_path(@conn, :index) %></span>

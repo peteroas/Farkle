@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Farkle</h1>
+      <p class="lead">Gods of War! Maybe your hammer be mighty</p>
+      <hr class="my-4">
+      <button type="button" class="btn btn-outline-primary">
+        <%= link "Create an New Game", to: Routes.game_path(@conn, :new) %>
+      </button>
+
+      <button type="button" class="btn btn-outline-primary">
+        <%= link "Join an Existing Game", to: Routes.game_path(@conn, :index) %>
+      </button>
+    </div>
+  </div>
+</div>
+

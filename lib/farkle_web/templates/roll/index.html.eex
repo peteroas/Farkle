@@ -1,0 +1,28 @@
+<h1>Listing Rolls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Locked?</th>
+      <th>Number</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for roll <- @rolls do %>
+    <tr>
+      <td><%= roll.locked? %></td>
+      <td><%= roll.number %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.roll_path(@conn, :show, roll) %></span>
+        <span><%= link "Edit", to: Routes.roll_path(@conn, :edit, roll) %></span>
+        <span><%= link "Delete", to: Routes.roll_path(@conn, :delete, roll), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Roll", to: Routes.roll_path(@conn, :new) %></span>
